@@ -1,0 +1,6 @@
+# Gate 1 needs nothing beyond the Python standard library.
+# These are only required to rerun Gate 2 (power_analysis.py).
+numpy>=1.24
+scipy>=1.10
+# Gate 2 pilot (gate2_*.py) additionally needs a model family and metrics.
+scikit-learn>=1.3

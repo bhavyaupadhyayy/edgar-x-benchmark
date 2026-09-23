@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use EDGAR-X, please cite the working paper."
+title: "EDGAR-X: A Point-in-Time Benchmark for Bankruptcy Prediction from SEC Filings"
+abstract: >-
+  A point-in-time benchmark for predicting US Chapter 7 or Chapter 11 bankruptcy
+  within 365 days of a Form 10-K, in which every input is fixed against that
+  filing's EDGAR acceptance timestamp. The panel holds 59,500 Form 10-K
+  observations from 2012 to 2024 carrying 437 bankruptcy-positive observations,
+  of which 54,351 observations and 408 positive observations are testable under
+  rolling temporal evaluation. The repository includes a signed audit of four
+  information-set contamination channels and a controlled comparison of filing
+  text against financial ratios under a common sparse linear model family.
+type: software
+authors:
+  - family-names: Upadhyay
+    given-names: Bhavya
+    email: officiallybhavya@gmail.com
+license: MIT
+keywords:
+  - bankruptcy prediction
+  - point-in-time data
+  - SEC filings
+  - benchmark contamination
+  - average precision
+  - textual analysis
+version: "1.1"
+date-released: "2026-09-23"

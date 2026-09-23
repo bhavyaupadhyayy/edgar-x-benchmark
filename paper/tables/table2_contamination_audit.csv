@@ -1,0 +1,5 @@
+Channel,Estimand,Result,Verdict
+Later-restated financials,"signed relative ΔAP, paired","AP 0.0235 PIT vs 0.0210 contaminated; ΔAP −0.0025, −10.49%; 95% CI [−0.0152, +0.0010]",Pre-registered inflation hypothesis **not supported**
+Present-day-survivor universe,"composition, not performance","−35.6% observations, −77.7% positive observations; prevalence 0.00580 → 0.00201",Reported as counts; paired estimand retains 76 positive obs. (MDE 51-70%)
+Industry-classification vintage,signed ΔAP on affected subset,"4,248 observations (7.2%), 1,074 CIKs, **2 positive observations** affected",Terminated before modelling
+Random vs rolling evaluation,"signed relative ΔAP, paired","8/12 cohorts positive, event-weighted +2.6%, 95% CI [−0.0036, +0.0084]; CIK grouping does not remove it; matched volume collapses cohort median +11.87% → +0.04%","Heterogeneous protocol sensitivity, not stable inflation"

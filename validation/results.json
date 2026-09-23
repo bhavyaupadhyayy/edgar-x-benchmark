@@ -1,0 +1,740 @@
+{
+  "n_cases": 188,
+  "deviations": {
+    "contaminated_reviewer_case_judgements": 0,
+    "affected_cases": 0,
+    "affected_mapped_positive_cases": [],
+    "detail": []
+  },
+  "primary": {
+    "definition": "classifier mapped-positive confirmation rate against final human consensus",
+    "numerator": 92,
+    "denominator": 95,
+    "estimate": 0.968421052631579,
+    "wilson_95_lo": 0.9112290135269181,
+    "wilson_95_hi": 0.9892028605255756,
+    "not_confirmed_cases": [
+      "V-db10d62faf",
+      "V-19b9fe683c",
+      "V-3aa349480a"
+    ],
+    "cannot_determine_counted_as_not_confirmed": 0,
+    "cannot_determine_cases": [],
+    "denominator_reduced_by_deviations": false
+  },
+  "first_pass_agreement": {
+    "disposition": {
+      "agree": 175,
+      "n": 188,
+      "rate": 0.9308510638297872,
+      "excluded_for_deviation": 0
+    },
+    "chapter": {
+      "agree": 136,
+      "n": 137,
+      "rate": 0.9927007299270073,
+      "excluded_for_deviation": 0
+    },
+    "petition_date": {
+      "agree": 137,
+      "n": 137,
+      "rate": 1.0,
+      "excluded_for_deviation": 0
+    },
+    "identity": {
+      "agree": 164,
+      "n": 188,
+      "rate": 0.8723404255319149,
+      "excluded_for_deviation": 0
+    }
+  },
+  "kappa_binary": {
+    "n": 188,
+    "observed_agreement": 0.9521276595744681,
+    "expected_agreement": 0.6269805341783613,
+    "kappa": 0.8716626213592233,
+    "undefined": false,
+    "contingency_AposBpos": 137,
+    "contingency_AposBneg": 1,
+    "contingency_AnegBpos": 8,
+    "contingency_AnegBneg": 42,
+    "excluded_for_deviation": 0
+  },
+  "adjudication": {
+    "cases_requiring_reviewer_C": 52,
+    "percentage": 27.659574468085108,
+    "reviewer_C_rows_supplied": 29,
+    "reviewer_C_covers_all_disputed": false,
+    "disputed_only_in_C": [],
+    "disputed_missing_from_C": [
+      "V-103e0e4918",
+      "V-15e6e63756",
+      "V-2d4a99d64a",
+      "V-471126257d",
+      "V-4748ccd0e4",
+      "V-4b89cf9593",
+      "V-4bcf08a032",
+      "V-4ccffb0f3f",
+      "V-6094c185f4",
+      "V-752b0ba57f",
+      "V-8a4507932e",
+      "V-8fb41fafea",
+      "V-997c883290",
+      "V-9c545df29b",
+      "V-9d4f81d198",
+      "V-bba702d8a6",
+      "V-be54915a72",
+      "V-c081236a64",
+      "V-c7475f5e97",
+      "V-db6ea5aacc",
+      "V-e8ee3b1cbf",
+      "V-f01d48525b",
+      "V-fe01245585"
+    ],
+    "literal_field_level_disagreements": 52,
+    "vacuous_chapter_only_not_routed": 23,
+    "substantive_disagreements_routed_to_C": 29,
+    "vacuous_cases": [
+      "V-103e0e4918",
+      "V-15e6e63756",
+      "V-2d4a99d64a",
+      "V-471126257d",
+      "V-4748ccd0e4",
+      "V-4b89cf9593",
+      "V-4bcf08a032",
+      "V-4ccffb0f3f",
+      "V-6094c185f4",
+      "V-752b0ba57f",
+      "V-8a4507932e",
+      "V-8fb41fafea",
+      "V-997c883290",
+      "V-9c545df29b",
+      "V-9d4f81d198",
+      "V-bba702d8a6",
+      "V-be54915a72",
+      "V-c081236a64",
+      "V-c7475f5e97",
+      "V-db6ea5aacc",
+      "V-e8ee3b1cbf",
+      "V-f01d48525b",
+      "V-fe01245585"
+    ],
+    "vacuous_definition": "Both reviewers answered No to disposition, so the chapter question was not applicable; Reviewer A left it blank and Reviewer B wrote 'Cannot determine'. This is an encoding difference, not a substantive disagreement. The frozen plan did not define a not-applicable carve-out, so this routing is a declared post-hoc refinement, reported in full rather than applied silently."
+  },
+  "disagreement_taxonomy": {
+    "CHAPTER": 39,
+    "DETERMINABLE": 4,
+    "IDENTITY": 9
+  },
+  "disagreement_taxonomy_substantive_only": {
+    "CHAPTER": 16,
+    "DETERMINABLE": 4,
+    "IDENTITY": 9
+  },
+  "ai_vs_human_consensus": {
+    "mapping": "AI positive := ai_bankruptcy_event=yes AND ai_registrant_is_debtor=registrant AND ai_initial_event=initial",
+    "agree": 127,
+    "n": 188,
+    "rate": 0.675531914893617,
+    "n_divergences": 61,
+    "divergences": [
+      {
+        "case_id": "V-4c0d90c21e",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "other_entity",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-7fb154347d",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "unclear",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-cc2dd006f5",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "other_entity",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-e77461c6ab",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "other_entity",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-9feaa70163",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "other_entity",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-dfc8ec8fac",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "registrant",
+        "ai_initial_event": "initial",
+        "ai_positive": true,
+        "human_consensus": "No",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-3a8cf49a8e",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "other_entity",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-d3e87a2d0b",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "other_entity",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-f4fb43b515",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "subsidiary_affiliate",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-686572d94f",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "subsidiary_affiliate",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-1b038e7b7d",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "subsidiary_affiliate",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-2c1f8e862b",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "registrant",
+        "ai_initial_event": "initial",
+        "ai_positive": true,
+        "human_consensus": "No",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-f37f2e8e86",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "registrant",
+        "ai_initial_event": "later_update",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-f716d584b8",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "subsidiary_affiliate",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-779c4f0d33",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "other_entity",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-5868b7ee77",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "registrant",
+        "ai_initial_event": "later_update",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-5c1f5a03af",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "registrant",
+        "ai_initial_event": "initial",
+        "ai_positive": true,
+        "human_consensus": "No",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-57a1fe4b5b",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "registrant",
+        "ai_initial_event": "later_update",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-ad64e847e3",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "registrant",
+        "ai_initial_event": "later_update",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-103e0e4918",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "registrant",
+        "ai_initial_event": "initial",
+        "ai_positive": true,
+        "human_consensus": "No",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-4e2be84dcf",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "registrant",
+        "ai_initial_event": "later_update",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": true
+      },
+      {
+        "case_id": "V-23dc56d571",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "other_entity",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-95b524f576",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "other_entity",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-cf9d82bde3",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "registrant",
+        "ai_initial_event": "initial",
+        "ai_positive": true,
+        "human_consensus": "No",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-f081ec91ef",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "registrant",
+        "ai_initial_event": "initial",
+        "ai_positive": true,
+        "human_consensus": "No",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-3623ec7beb",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "registrant",
+        "ai_initial_event": "initial",
+        "ai_positive": true,
+        "human_consensus": "No",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-cfb5524020",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "subsidiary_affiliate",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-6d9325ec67",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "other_entity",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-86ea5705ba",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "other_entity",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-ba014c6bbd",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "subsidiary_affiliate",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-a266f4d83d",
+        "ai_bankruptcy_event": "no",
+        "ai_registrant_is_debtor": "none",
+        "ai_initial_event": "na",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-b1cee26760",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "subsidiary_affiliate",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-7d046559c9",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "subsidiary_affiliate",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-795502ed7c",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "subsidiary_affiliate",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-88c0c3bbe2",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "registrant",
+        "ai_initial_event": "later_update",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-f01d48525b",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "registrant",
+        "ai_initial_event": "initial",
+        "ai_positive": true,
+        "human_consensus": "No",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-db10d62faf",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "registrant",
+        "ai_initial_event": "initial",
+        "ai_positive": true,
+        "human_consensus": "No",
+        "classifier_mapped_positive": true
+      },
+      {
+        "case_id": "V-cbe781f022",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "subsidiary_affiliate",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-33fa7d52a6",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "subsidiary_affiliate",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-f22b5a4ee4",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "subsidiary_affiliate",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-12efdd07fa",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "subsidiary_affiliate",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-11bac8725d",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "registrant",
+        "ai_initial_event": "initial",
+        "ai_positive": true,
+        "human_consensus": "No",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-d5029b38b6",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "subsidiary_affiliate",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-5709150a3f",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "other_entity",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-e70638a6ed",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "subsidiary_affiliate",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-19b9fe683c",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "registrant",
+        "ai_initial_event": "initial",
+        "ai_positive": true,
+        "human_consensus": "No",
+        "classifier_mapped_positive": true
+      },
+      {
+        "case_id": "V-a2f7b101f7",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "registrant",
+        "ai_initial_event": "later_update",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-08f0fe8b1a",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "registrant",
+        "ai_initial_event": "later_update",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-f49bf897e1",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "subsidiary_affiliate",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-0abf3c570e",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "other_entity",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-be54915a72",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "registrant",
+        "ai_initial_event": "initial",
+        "ai_positive": true,
+        "human_consensus": "No",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-7d9988c4d9",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "subsidiary_affiliate",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": true
+      },
+      {
+        "case_id": "V-3aa349480a",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "registrant",
+        "ai_initial_event": "initial",
+        "ai_positive": true,
+        "human_consensus": "No",
+        "classifier_mapped_positive": true
+      },
+      {
+        "case_id": "V-3b8316f150",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "registrant",
+        "ai_initial_event": "initial",
+        "ai_positive": true,
+        "human_consensus": "No",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-5d2f46a360",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "subsidiary_affiliate",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-cc11ef2d8c",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "subsidiary_affiliate",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-6c14793f6f",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "other_entity",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-16018dc814",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "registrant",
+        "ai_initial_event": "initial",
+        "ai_positive": true,
+        "human_consensus": "No",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-d624826394",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "other_entity",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-93d6c9165a",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "other_entity",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      },
+      {
+        "case_id": "V-872a76cabd",
+        "ai_bankruptcy_event": "yes",
+        "ai_registrant_is_debtor": "other_entity",
+        "ai_initial_event": "initial",
+        "ai_positive": false,
+        "human_consensus": "Yes",
+        "classifier_mapped_positive": false
+      }
+    ]
+  },
+  "classifier_vs_consensus_all_188": {
+    "by_classifier_disposition": {
+      "agree": 139,
+      "n": 188,
+      "rate": 0.7393617021276596,
+      "classifier_pos_human_pos": 92,
+      "classifier_pos_human_neg": 3,
+      "classifier_neg_human_pos": 46,
+      "classifier_neg_human_neg": 47
+    },
+    "by_observation_map_membership": {
+      "agree": 139,
+      "n": 188,
+      "rate": 0.7393617021276596,
+      "classifier_pos_human_pos": 92,
+      "classifier_pos_human_neg": 3,
+      "classifier_neg_human_pos": 46,
+      "classifier_neg_human_neg": 47
+    },
+    "note": "The stratified holdout deliberately oversamples ambiguous, subsidiary-only and receivership-only events, so neither table is a population accuracy and neither is reported as one."
+  },
+  "ai_vs_human_consensus_mapped_positives": {
+    "agree": 90,
+    "n": 95,
+    "rate": 0.9473684210526315
+  },
+  "chapter_agreement_confirmed_positives": {
+    "agree": 91,
+    "n": 92,
+    "rate": 0.9891304347826086,
+    "note": "denominator is human-confirmed positives whose classifier disposition names a chapter"
+  },
+  "petition_date_agreement_confirmed_positives": {
+    "agree": 137,
+    "n": 137,
+    "rate": 1.0,
+    "excluded_unresolvable_under_consensus": 1
+  },
+  "consensus_provenance_audit": {
+    "consensus_equals_reviewer_A_per_field": {
+      "A_registrant_is_debtor": 188,
+      "B_initial_chapter": 188,
+      "C_petition_date": 188,
+      "D_identity_assessment": 188
+    },
+    "consensus_equals_reviewer_A_on_all_fields_all_cases": true,
+    "note": "Reviewer C selected Reviewer A for every disputed field, so the final consensus is Reviewer A's authoritative adjudication in full. Reviewer B functions as an independent agreement check, not as a contributor to the reference standard."
+  }
+}
