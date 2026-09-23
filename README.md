@@ -12,7 +12,7 @@ time is the actual bankruptcy petition date, not the date it was disclosed; and
 training rows come only from cohorts strictly earlier than the cohort being
 tested.
 
-The working paper is [`paper/EDGAR-X_working_paper_v1.1.pdf`](paper/EDGAR-X_working_paper_v1.1.pdf).
+The working paper is [`paper/EDGAR-X_working_paper_v1.2.pdf`](paper/EDGAR-X_working_paper_v1.2.pdf).
 
 ## The benchmark
 
@@ -107,7 +107,7 @@ benchmark/        construction, point-in-time reconstruction, acquisition, tests
   gate4_release/  frozen authoritative metrics (per-cohort, aggregate, LOO, selected C)
 protocols/        label policy, benchmark protocol, contamination audit, data card, limitations
 validation/       human-validation protocol, amendments, analysis plan, aggregate results
-paper/            working paper v1.1, figures, tables, bibliography
+paper/            working paper v1.2, figures, tables, bibliography
 repro/            scripts that rebuild every table and figure from the frozen metrics
 ```
 
