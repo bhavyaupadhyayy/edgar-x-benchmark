@@ -29,6 +29,6 @@ repository-code: "https://github.com/bhavyaupadhyayy/edgar-x-benchmark"
 notes: >-
   The version field is the benchmark release version (v1.0.0), which is what
   this repository packages. The accompanying working paper is separately
-  versioned and is at v1.2; the two version lines are deliberately
+  versioned and is at v1.3; the two version lines are deliberately
   independent, so that fixing manuscript wording does not imply a new
   benchmark release and vice versa. No DOI has been minted.

@@ -12,7 +12,11 @@ time is the actual bankruptcy petition date, not the date it was disclosed; and
 training rows come only from cohorts strictly earlier than the cohort being
 tested.
 
-The working paper is [`paper/EDGAR-X_working_paper_v1.2.pdf`](paper/EDGAR-X_working_paper_v1.2.pdf).
+The working paper is [`paper/EDGAR-X_working_paper_v1.3.pdf`](paper/EDGAR-X_working_paper_v1.3.pdf).
+The superseded [`v1.2`](paper/EDGAR-X_working_paper_v1.2.pdf) is retained alongside it. v1.3 is a
+transparency update that specifies the LLM-assisted development audit behind the
+classification-rule revisions and adds the generative-AI disclosures. No benchmark number,
+result, table or figure changed.
 
 ## The benchmark
 
@@ -107,7 +111,7 @@ benchmark/        construction, point-in-time reconstruction, acquisition, tests
   gate4_release/  frozen authoritative metrics (per-cohort, aggregate, LOO, selected C)
 protocols/        label policy, benchmark protocol, contamination audit, data card, limitations
 validation/       human-validation protocol, amendments, analysis plan, aggregate results
-paper/            working paper v1.2, figures, tables, bibliography
+paper/            working paper v1.3 (and superseded v1.2), figures, tables, bibliography
 repro/            scripts that rebuild every table and figure from the frozen metrics
 ```
 
