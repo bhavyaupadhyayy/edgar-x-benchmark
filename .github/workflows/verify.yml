@@ -1,0 +1,40 @@
+name: verify
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    # The frozen PNGs were rendered on macOS; Linux rasterizes text slightly differently.
+    runs-on: macos-latest
+    env:
+      # verify_reproduction.py strips /CreationDate before comparing PDFs, but the
+      # stamp's length still shifts the xref offsets, so it must use the same
+      # UTC offset format as the frozen figures.
+      TZ: America/Los_Angeles
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check artifact hashes
+        run: shasum -a 256 --check --strict ARTIFACT_MANIFEST.sha256
+
+      - name: Benchmark test suites (standard library only)
+        working-directory: benchmark
+        run: |
+          python package_test.py
+          python integration_test.py
+          python acquisition_test.py
+
+      # Figures are compared byte for byte, so pin the plotting stack that
+      # produced the frozen artifacts.
+      - name: Reproduce paper tables and figures
+        working-directory: repro
+        run: |
+          pip install "matplotlib==3.10.8" "numpy==2.4.1" "pillow==12.1.0" "fonttools==4.61.1" \
+            "contourpy==1.3.3" "kiwisolver==1.4.9" "pyparsing==3.3.1"
+          python verify_reproduction.py
