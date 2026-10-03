@@ -7,15 +7,18 @@ on:
 
 jobs:
   verify:
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest, macos-latest]
-    runs-on: ${{ matrix.os }}
+    runs-on: macos-latest
+    defaults:
+      run:
+        shell: bash -el {0}
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+
+      # conda-forge Python matches the environment that produced the frozen
+      # figures; PDF bytes depend on the zlib build Python links against.
+      - uses: conda-incubator/setup-miniconda@v3
         with:
+          miniforge-version: latest
           python-version: "3.12"
 
       - name: Check artifact hashes
