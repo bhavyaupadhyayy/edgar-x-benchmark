@@ -7,18 +7,17 @@ on:
 
 jobs:
   verify:
+    # The frozen PNGs were rendered on macOS; Linux rasterizes text slightly differently.
     runs-on: macos-latest
-    defaults:
-      run:
-        shell: bash -el {0}
+    env:
+      # verify_reproduction.py strips /CreationDate before comparing PDFs, but the
+      # stamp's length still shifts the xref offsets, so it must use the same
+      # UTC offset format as the frozen figures.
+      TZ: America/Los_Angeles
     steps:
       - uses: actions/checkout@v4
-
-      # conda-forge Python matches the environment that produced the frozen
-      # figures; PDF bytes depend on the zlib build Python links against.
-      - uses: conda-incubator/setup-miniconda@v3
+      - uses: actions/setup-python@v5
         with:
-          miniforge-version: latest
           python-version: "3.12"
 
       - name: Check artifact hashes
@@ -39,15 +38,3 @@ jobs:
           pip install "matplotlib==3.10.8" "numpy==2.4.1" "pillow==12.1.0" "fonttools==4.61.1" \
             "contourpy==1.3.3" "kiwisolver==1.4.9" "pyparsing==3.3.1"
           python verify_reproduction.py
-
-      - name: Upload regenerated figures (debug)
-        if: failure()
-        working-directory: repro
-        run: |
-          for f in fig1_pipeline fig2_ap_by_cohort; do python $f.py; done
-          mkdir -p ../ci-figs && cp ../paper/figures/fig1_pipeline.pdf ../paper/figures/fig2_ap_by_cohort.pdf ../ci-figs/
-      - uses: actions/upload-artifact@v4
-        if: failure()
-        with:
-          name: ci-figs
-          path: ci-figs
