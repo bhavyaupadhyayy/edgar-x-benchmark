@@ -1,0 +1,33 @@
+name: verify
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check artifact hashes
+        run: sha256sum --check --strict ARTIFACT_MANIFEST.sha256
+
+      - name: Benchmark test suites (standard library only)
+        working-directory: benchmark
+        run: |
+          python package_test.py
+          python integration_test.py
+          python acquisition_test.py
+
+      # Figures are compared byte for byte, so pin the plotting stack that
+      # produced the frozen artifacts.
+      - name: Reproduce paper tables and figures
+        working-directory: repro
+        run: |
+          pip install "matplotlib==3.10.8" "numpy==2.4.1"
+          python verify_reproduction.py
