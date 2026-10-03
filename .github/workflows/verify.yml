@@ -7,7 +7,11 @@ on:
 
 jobs:
   verify:
-    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -15,7 +19,7 @@ jobs:
           python-version: "3.12"
 
       - name: Check artifact hashes
-        run: sha256sum --check --strict ARTIFACT_MANIFEST.sha256
+        run: shasum -a 256 --check --strict ARTIFACT_MANIFEST.sha256
 
       - name: Benchmark test suites (standard library only)
         working-directory: benchmark
@@ -29,5 +33,5 @@ jobs:
       - name: Reproduce paper tables and figures
         working-directory: repro
         run: |
-          pip install "matplotlib==3.10.8" "numpy==2.4.1"
+          pip install "matplotlib==3.10.8" "numpy==2.4.1" "pillow==12.1.0"
           python verify_reproduction.py
