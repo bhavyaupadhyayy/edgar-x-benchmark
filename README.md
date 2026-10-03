@@ -130,6 +130,19 @@ against the shipped copies, reporting any mismatch rather than correcting it.
 Figure PDFs embed a creation timestamp, so they are compared with `/CreationDate`
 stripped; everything else is compared byte for byte.
 
+Byte-for-byte figure matches depend on the environment, not just the data. The
+frozen figures were rendered on macOS with the versions pinned in
+`benchmark/requirements.txt`, in the `America/Los_Angeles` timezone. The PDF
+timestamp is stripped before comparison, but its UTC-offset format changes the
+file's byte offsets, so run with `TZ=America/Los_Angeles` elsewhere. On Linux the
+PNG text rasterizes slightly differently and the PNGs will not match. The tables
+reproduce exactly anywhere. CI (`.github/workflows/verify.yml`) runs this check
+on every push.
+
+`protocols/REPRODUCIBILITY.md` is frozen as written in the development
+repository, so its paths use that layout: `research/bankruptcy_benchmark/` there
+is `benchmark/` here, and its figure scripts are in `repro/`.
+
 See [`protocols/REPRODUCIBILITY.md`](protocols/REPRODUCIBILITY.md) for the full
 pipeline and for which stages are expensive.
 

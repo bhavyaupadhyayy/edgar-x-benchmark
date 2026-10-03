@@ -4,3 +4,8 @@ numpy>=1.24
 scipy>=1.10
 # Gate 2 pilot (gate2_*.py) additionally needs a model family and metrics.
 scikit-learn>=1.3
+# repro/ (tables and figures). Pinned because verify_reproduction.py compares
+# figures byte for byte against the frozen copies.
+matplotlib==3.10.8
+pillow==12.1.0
+fonttools==4.61.1
